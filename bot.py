@@ -506,4 +506,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if os.getenv("VERCEL"):
+        print("Running on Vercel - polling disabled")
+    else:
+        main()
